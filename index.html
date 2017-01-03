@@ -2,32 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+
 <!-- Mobile Friendliness -->
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
+<!-- CSS -->
 <link rel="stylesheet" href="css/main.css">
 <!--Web Fonts-->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
+    <!-- media-queries.js (fallback) -->
+    <!--[if lt IE 9]>
+            <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>			
+    <![endif]-->
 
+    <!-- html5.js -->
+    <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
 <title>Pizza Love</title>
-
-
-<!--JS-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-
 </head>
 
   <body>
 
+<!--Header-->
 
-
-
-
-<!--Navigation-->
-
+  <!--Navigation-->
 <nav>
 <label for="nav__toggle__checkbox" class="nav__toggle__label">≡</label>
   <input type="checkbox" id="nav__toggle__checkbox" class="nav__toggle__checkbox">
@@ -38,38 +38,38 @@
       <li><a href="#">Доставка</a></li>
       <li><a href="#">Контакты</a></li>
       <li class="special"><a href="#">Акции</a></li> 
-      <li class=" cart hide"><a href="#">Корзина</a></li>
+      <li class="cart hide"><a href="#"></a></li>
       
     </ul>
- 
 </nav>
-
-
-
 <!--End Navigation-->
-
-<!--Content-->
-
-
 <header>
 <h1>Доставка пиццы</h1>
 <h2>555-555</h2>
-<h3>ул.Бобкэт,5</h3>
+<h3>ул.Толстого,5</h3>
 </header>
+<!--End Header-->
+<hr>
+<!--Content-->
+<main>
+<article>
 
-
-<article class="main">
-
-
-<section id="lunch">
-<img src="pictures/lunch.jpg">
-<h3 class="order_lunch">Заказать обед</h3>
+<!--Banner-->
+<section id="banner">
+<img src="pictures/pizzamain.png" alt="Третья пицца в подарок">
+<h1 class="banner_main">Третья пицца <br>в ПОДАРОК!</h1>
+<h2 class="choose_pizza">Выбрать пиццу</h2>
 </section>
+<!--End Banner-->
 <hr>
 
-<section id="menu">
 
-<div class="specials">Акции</div>
+<!--Menu Buttons-->
+<section id="menu"> 
+<h1>Меню</h1>
+<img src="pictures/lunch.jpg" alt="Обеденное меню">
+<h2 class="order_lunch">Заказать обед</h2>
+
 
 <div class="menu1">
 <button class="pizza">Пиццы</button>
@@ -86,18 +86,83 @@
 <button class="drink">Напитки</button>
 </div>
 
+<div class="specials">Акции</div>
 </section>
+
 <hr>
+<!--End Menu Buttons-->
 
+<!--Pizza Photos and Description-->
+<section id="pizza_gallery">
+<h1>Пиццы</h1>
 
+<div class="container">
 
+<div class="card">
+<img src="pictures/p-1.png">
+<p>Add a cardription of the image here</p>
+<button class="to_cart">В корзину</button>
+</div>
+
+<div class="card">
+<img src="pictures/p-1.png">
+<p>Add a cardription of the image here</p>
+<button class="to_cart">В корзину</button>
+</div>
+
+<div class="card">
+<img src="pictures/p-1.png">
+<p>Add a cardription of the image here</p>
+<button class="to_cart">В корзину</button>
+</div>
+
+<div class="card">
+<img src="pictures/p-1.png">
+<p>Add a cardription of the image here</p>
+<button class="to_cart">В корзину</button>
+</div>
+
+<div class="card">
+<img src="pictures/p-1.png">
+<p>Add a cardription of the image here</p>
+<button class="to_cart">В корзину</button>
+</div>
+
+<div class="card">
+<img src="pictures/p-1.png">
+<p>Add a cardription of the image here</p>
+<button class="to_cart">В корзину</button>
+</div>
+
+<div class="card">
+<img src="pictures/p-1.png">
+<p>Add a cardription of the image here</p>
+<button class="to_cart">В корзину</button>
+</div>
+
+<div class="card">
+<img src="pictures/p-1.png">
+<p>Add a cardription of the image here</p>
+<button class="to_cart">В корзину</button>
+</div>
+
+<div class="card">
+<img src="pictures/p-1.png">
+<p>Add a cardription of the image here</p>
+<button class="to_cart">В корзину</button>
+</div>
+
+</div>
+</section>
+<!--End Pizza Photos and Description-->
 
 </article>
 
-
+</main>
 
 <!--End Content-->
 
+<footer></footer>
 
   </body>
 </html>
