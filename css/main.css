@@ -55,7 +55,19 @@ background-color: rgba(250, 250, 250,0.9);
 color: black
   
 }
-.order_lunch:active,.choose_pizza:active,.specials:active{
+.order_lunch:active{
+background-color: #eee;
+background-color: rgba(250, 250, 250,0.9);
+color: black
+}
+
+.choose_pizza:active{
+background-color: #eee;
+background-color: rgba(250, 250, 250,0.9);
+color: black
+}
+
+.specials:active{
 background-color: #eee;
 background-color: rgba(250, 250, 250,0.9);
 color: black
