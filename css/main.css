@@ -146,7 +146,7 @@ div.card {
 body {
 background-color: darkslategray;
 color: #eee;
-background-image: url(../pictures/mobile360.jpg); 
+background-image: url(../pictures/mobile.jpg); 
 background-repeat: no-repeat; 
 background-position: center center;
 background-attachment: fixed;       
@@ -154,7 +154,7 @@ background-attachment: fixed;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover; 
-width:100%
+
 
 
 } 
