@@ -1,3 +1,9 @@
+html {
+height: 100vh; /* set viewport constraint */
+min-height: 100%; /* enforce height */
+}
+
+
 body{
 margin: 0px;
 background-color: rgba(39, 54, 59, 0.6);
@@ -132,7 +138,7 @@ div.card {
 
 /*3-column layout*/
 @media only screen and (min-width: 768px){
-.container{
+.pizza_gallery{
     -webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
     column-count: 3
@@ -143,18 +149,15 @@ div.card {
 
 /* Mobile*/
 @media only screen and (max-width: 768px){
-body {
+.container {
 background-color: darkslategray;
 color: #eee;
 background-image: url(../pictures/mobile.jpg); 
-background-repeat: no-repeat; 
-background-position: center center;
-background-attachment: fixed;       
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover; 
-
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: top center;
+background-size: cover;
+-webkit-background-size: cover
 
 
 } 
@@ -302,7 +305,7 @@ li:nth-child(2) {
 }
 
 nav{
-    position: relative
+    position: relative;
 
 }
 }
