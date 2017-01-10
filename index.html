@@ -10,7 +10,6 @@
 <!--Web Fonts-->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
     <!-- media-queries.js (fallback) -->
     <!--[if lt IE 9]>
@@ -45,29 +44,33 @@ z-index: -9999!important;
 <!--End Fixed bg-->
 
 <!--Navigation-->
+  <div class="logo hide"><a href="#"><img src="pictures/logo.png"></a></div>
 <nav>
-<label for="nav__toggle__checkbox" class="nav__toggle__label">≡</label>
-  <input type="checkbox" id="nav__toggle__checkbox" class="nav__toggle__checkbox">
-  <ul class="nav__entries flexbox">
-      <li class="logo hide"><a href="#">LOGO</a></li>
-      <li><a href="#">Меню</a></li>
+<input type="checkbox" id="toggle">
+    <label class="toggle_menu" for="toggle">Меню</label>
+    <div class="mobile_cart"><img src="pictures/cart2.png"></div>
+  <ul class="menu hide">
+      <li><a href="#">Пиццы</a></li>
       <li><a href="#">Обеды</a></li>
+      <li><a href="#">Сэндвичи</a></li>
+      <li><a href="#">Напитки</a></li>
       <li><a href="#">Доставка</a></li>
-      <li><a href="#">Контакты</a></li>
       <li class="special"><a href="#">Акции</a></li> 
-      <li class="cart hide"><a href="#"></a></li>
+      <li class="cart hide"><a href="#"><img src="pictures/cart2.png"></a></li>
       
     </ul>
 </nav>
 <!--End Navigation-->
 
-<!--Header-->
+
 <main>
 
+<!--Header-->
 <header>
 <h1>Доставка пиццы</h1>
 <h2>555-555</h2>
 <h3>ул.Толстого,5</h3>
+<h3>9:00-02:00</h3>
 </header>
 
 <!--End Header-->
@@ -91,9 +94,10 @@ z-index: -9999!important;
 <!--Menu Buttons-->
 
 <section id="menu"> 
+
 <h1>Меню</h1>
 <img src="pictures/lunch.jpg" alt="Обеденное меню">
-<h2 class="order_lunch">Заказать обед</h2>
+<button class="order_lunch">Заказать обед</button>
 
 
 <div class="menu1 flexbox">
@@ -141,7 +145,7 @@ z-index: -9999!important;
 <p> <span class="weight">450</span> гр</p>
 </div>
 <br>
-<button class="to_cart">В корзину</button>
+<button class="to_cart">Заказать</button>
 </div>
 
 
@@ -151,9 +155,9 @@ z-index: -9999!important;
 <p>Add a description of the image here</p>
  <br>
  <form>
-    <input  name="p-1-size" type="radio" value="small" checked> 22 см
-    <input  name="p-1-size" type="radio" value="medium" > 32 см
-    <input  name="p-1-size" type="radio" value="large">40 см
+    <input  name="p-2-size" type="radio" value="small" checked> 22 см
+    <input  name="p-2-size" type="radio" value="medium" > 32 см
+    <input  name="p-2-size" type="radio" value="large">40 см
   </form> 
 <br>
 <div class="param">
@@ -161,7 +165,7 @@ z-index: -9999!important;
 <p> <span class="weight">450</span> гр</p>
 </div>
 <br>
-<button class="to_cart">В корзину</button>
+<button class="to_cart">Заказать</button>
 </div>
 
 <div class="card">
@@ -170,9 +174,9 @@ z-index: -9999!important;
 <p>Add a description of the image here</p>
 <br>
   <form>
-    <input  name="p-1-size" type="radio" value="small" checked> 22 см
-    <input  name="p-1-size" type="radio" value="medium" > 32 см
-    <input  name="p-1-size" type="radio" value="large">40 см
+    <input  name="p-3-size" type="radio" value="small" checked> 22 см
+    <input  name="p-3-size" type="radio" value="medium" > 32 см
+    <input  name="p-3-size" type="radio" value="large">40 см
   </form> 
 <br>
 <div class="param">
@@ -180,7 +184,7 @@ z-index: -9999!important;
 <p> <span class="weight">450</span> гр</p>
 </div>
 <br>
-<button class="to_cart">В корзину</button>
+<button class="to_cart">Заказать</button>
 </div>
 
 <div class="card">
@@ -188,9 +192,9 @@ z-index: -9999!important;
 <img src="pictures/p-1.png">
 <p>Add a description of the image here</p>
  <form>
-    <input  name="p-1-size" type="radio" value="small" checked> 22 см
-    <input  name="p-1-size" type="radio" value="medium" > 32 см
-    <input  name="p-1-size" type="radio" value="large">40 см
+    <input  name="p-4-size" type="radio" value="small" checked> 22 см
+    <input  name="p-4-size" type="radio" value="medium" > 32 см
+    <input  name="p-4-size" type="radio" value="large">40 см
   </form> 
 <br>
 <div class="param">
@@ -198,7 +202,7 @@ z-index: -9999!important;
 <p> <span class="weight">450</span> гр</p>
 </div>
 <br>
-<button class="to_cart">В корзину</button>
+<button class="to_cart">Заказать</button>
 </div>
 
 <div class="card">
@@ -206,9 +210,9 @@ z-index: -9999!important;
 <img src="pictures/p-1.png">
 <p>Add a description of the image here</p>
   <form>
-    <input  name="p-1-size" type="radio" value="small" checked> 22 см
-    <input  name="p-1-size" type="radio" value="medium" > 32 см
-    <input  name="p-1-size" type="radio" value="large">40 см
+    <input  name="p-5-size" type="radio" value="small" checked> 22 см
+    <input  name="p-5-size" type="radio" value="medium" > 32 см
+    <input  name="p-5-size" type="radio" value="large">40 см
   </form> 
 <br>
 <div class="param">
@@ -216,7 +220,7 @@ z-index: -9999!important;
 <p> <span class="weight">450</span> гр</p>
 </div>
 <br>
-<button class="to_cart">В корзину</button>
+<button class="to_cart">Заказать</button>
 </div>
 
 <div class="card">
@@ -224,9 +228,9 @@ z-index: -9999!important;
 <img src="pictures/p-1.png">
 <p>Add a description of the image here</p>
   <form>
-    <input  name="p-1-size" type="radio" value="small" checked> 22 см
-    <input  name="p-1-size" type="radio" value="medium" > 32 см
-    <input  name="p-1-size" type="radio" value="large">40 см
+    <input  name="p-6-size" type="radio" value="small" checked> 22 см
+    <input  name="p-6-size" type="radio" value="medium" > 32 см
+    <input  name="p-6-size" type="radio" value="large">40 см
   </form> 
 <br>
 <div class="param">
@@ -234,7 +238,7 @@ z-index: -9999!important;
 <p> <span class="weight">450</span> гр</p>
 </div>
 <br>
-<button class="to_cart">В корзину</button>
+<button class="to_cart">Заказать</button>
 </div>
 
 <div class="card">
@@ -242,9 +246,9 @@ z-index: -9999!important;
 <img src="pictures/p-1.png">
 <p>Add a description of the image here</p>
   <form>
-    <input  name="p-1-size" type="radio" value="small" checked> 22 см
-    <input  name="p-1-size" type="radio" value="medium" > 32 см
-    <input  name="p-1-size" type="radio" value="large">40 см
+    <input  name="p-7-size" type="radio" value="small" checked> 22 см
+    <input  name="p-7-size" type="radio" value="medium" > 32 см
+    <input  name="p-7-size" type="radio" value="large">40 см
   </form> 
 <br>
 <div class="param">
@@ -252,7 +256,7 @@ z-index: -9999!important;
 <p> <span class="weight">450</span> гр</p>
 </div>
 <br>
-<button class="to_cart">В корзину</button>
+<button class="to_cart">Заказать</button>
 </div>
 
 <div class="card">
@@ -260,9 +264,9 @@ z-index: -9999!important;
 <img src="pictures/p-1.png">
 <p>Add a description of the image here</p>
   <form>
-    <input  name="p-1-size" type="radio" value="small" checked> 22 см
-    <input  name="p-1-size" type="radio" value="medium" > 32 см
-    <input  name="p-1-size" type="radio" value="large">40 см
+    <input  name="p-8-size" type="radio" value="small" checked> 22 см
+    <input  name="p-8-size" type="radio" value="medium" > 32 см
+    <input  name="p-8-size" type="radio" value="large">40 см
   </form> 
 <br>
 <div class="param">
@@ -270,7 +274,7 @@ z-index: -9999!important;
 <p> <span class="weight">450</span> гр</p>
 </div>
 <br>
-<button class="to_cart">В корзину</button>
+<button class="to_cart">Заказать</button>
 </div>
 
 <div class="card">
@@ -278,9 +282,9 @@ z-index: -9999!important;
 <img src="pictures/p-1.png">
 <p>Add a description of the image here</p>
  <form>
-    <input  name="p-1-size" type="radio" value="small" checked> 22 см
-    <input  name="p-1-size" type="radio" value="medium" > 32 см
-    <input  name="p-1-size" type="radio" value="large">40 см
+    <input  name="p-9-size" type="radio" value="small" checked> 22 см
+    <input  name="p-9-size" type="radio" value="medium" > 32 см
+    <input  name="p-9-size" type="radio" value="large">40 см
   </form> 
 <br>
 <div class="param">
@@ -288,7 +292,7 @@ z-index: -9999!important;
 <p> <span class="weight">450</span> гр</p>
 </div>
 <br>
-<button class="to_cart">В корзину</button>
+<button class="to_cart">Заказать</button>
 </div>
 
 <!--End Pizza Photos and Description-->
@@ -305,12 +309,15 @@ z-index: -9999!important;
 <div class="card mon">
 <h2>Понедельник</h2>
 <img src="pictures/dinner.png">
-<div class="dinner_items">
-Томатный суп<br>
-Греческий салат<br>
-Мини-пицца
+<div class="dinner_menu">
+<p>Томатный суп</p>
+<p>Греческий салат</p>
+<p>Сэндвич с индейкой</p>
 </div>
+<div class="param">
 <p><span class="price">5</span> рублей</p>
+</div>
+<br>
 <button class="to_cart">Заказать</button>
 </div>
 
@@ -318,57 +325,65 @@ z-index: -9999!important;
 <div class="card tue">
 <h2>Вторник</h2>
 <img src="pictures/dinner.png">
-<div class="dinner_items">
-Soup<br>
-Salad<br>
-Burger
+<div class="dinner_menu">
+<p>Soup</p>
+<p>Salad</p>
+<p>Sandwich</p>
 </div>
+<div class="param">
 <p><span class="price">5</span> рублей</p>
+</div>
+<br>
 <button class="to_cart">Заказать</button>
 </div>
 
 <div class="card wed">
 <h2>Среда</h2>
 <img src="pictures/dinner.png">
-<div class="dinner_items">
-Soup<br>
-Salad<br>
-Burger 
+<div class="dinner_menu">
+<p>Soup</p>
+<p>Salad</p>
+<p>Sandwich</p>
 </div>
+<div class="param">
 <p><span class="price">5</span> рублей</p>
+</div>
+<br>
 <button class="to_cart">Заказать</button>
 </div>
 
 <div class="card thur">
 <h2>Четверг</h2>
 <img src="pictures/dinner.png">
-<div class="dinner_items">
-Soup<br>
-Salad<br>
-Burger 
+<div class="dinner_menu">
+<p>Soup</p>
+<p>Salad</p>
+<p>Sandwich</p>
 </div>
+<div class="param">
 <p><span class="price">5</span> рублей</p>
+</div>
+<br>
 <button class="to_cart">Заказать</button>
 </div>
 
 <div class="card fri">
 <h2>Пятница</h2>
 <img src="pictures/dinner.png">
-<div class="dinner_items">
-Soup<br>
-Salad<br>
-Burger
+<div class="dinner_menu">
+<p>Soup</p>
+<p>Salad</p>
+<p>Sandwich</p>
 </div>
+<div class="param">
 <p><span class="price">5</span> рублей</p>
-<button class="to_cart">Заказать</button>
 </div>
-
+<br>
+<button class="to_cart">Заказать</button>
 </div>
 </section>
 
 <!--End Dinner Photos and Description-->
-
-
 
 </article>
 
@@ -380,9 +395,7 @@ Burger
 
      
 
-    <script>
-    
-    </script>
-
+ 
+   
   </body>
 </html>
