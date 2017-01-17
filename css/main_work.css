@@ -1,4 +1,5 @@
 /*General Style */
+
 * {
   box-sizing: border-box;
 }
@@ -11,26 +12,41 @@ body {
   color: #eee;
   letter-spacing: 0.02rem;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  font-size: 17px;
+}
+
+p{
+  vertical-align: middle
 }
 
 img {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
 }
 
-h1{
-font-size: 1.3rem;
-} 
-h2 {
-  font-size: 1.2rem;
+header {
+  color: #eee;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2px;
+  box-shadow: 0 3px 3px 5px rgba(0,0,0,0.7);
 }
+
+h1 {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
 h3 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 hr {
@@ -41,12 +57,13 @@ hr {
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
 }
 
-
-.clearfix:before,.clearfix:after {
+.clearfix:before {
   content: "";
   display: table;
 }
 .clearfix:after {
+  content: "";
+  display: table;
   clear: both;
 }
 
@@ -59,42 +76,42 @@ main {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.top_nav {
+.menu_nav {
   max-width: 70em;
   margin: 0 auto;
-  background-color: #584a47;
+  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: 0.3px solid;
   z-index: 999;
 }
 
- 
-
-.flexbox.checkout_nav{
-   background-color: #F44336;
-   font-weight: 700;
-   max-width: 70em;
-   margin: 0 auto;
+.cart_nav {
+  background-color: #F44336;
+  font-weight: 700;
+  max-width: 70em;
+  margin: 0 auto;
 }
 
-.fixed{
+.fixed {
+  display: block;
   position: fixed;
-  top:auto;
-  bottom:0;
+  top: auto;
+  bottom: 0;
   right: 0;
   left: 0;
   z-index: 999;
   width: 100%;
 }
-.checkout a{
-  text-decoration: none;
+
+.checkout a {
   padding: 0.5em;
   margin: 1em;
-  color: #eee;
   border: 1px solid;
-  border-radius: 5px
+  border-radius: 5px;
 }
-.checkout a:hover{
-background-color:#333;
-background-color: rgba(0, 0, 0, 0.5);
+.checkout a:hover {
+  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 input[type=checkbox], label, .mobile_cart {
@@ -107,45 +124,41 @@ ul {
   margin: 0;
 }
 
- a {
+a {
   text-decoration: none;
   color: #eee;
+  position: relative;
   vertical-align: middle;
-
 }
-
-.cart {
-  display: block;
-  float: right;
-  cursor: pointer;
+.menu_nav a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  border-bottom: 2px solid #eee;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
-
-
-header {
-  color: #eee;
-  text-align: center;
-  width: 90%;
-  margin: 0 auto;
-  padding: 2px;
-  border: 1px dashed #eee;
+.menu_nav a:hover:after {
+  width: 100%;
 }
-
-
-.cart {
-   width:40px;
-   margin: 0.8em 0.3em 0 0.3em;
-  }
 
 .pizza_banner {
   background: url(../pictures/banner_pizza.png) 50% 0 no-repeat;
- 
 }
 
 .dinner_banner {
   margin-top: 20px;
 }
 
-
+.logo {
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+}
 
 /*End General Style */
 
@@ -156,16 +169,24 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+.center{
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.right{
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 /*End Responsive flexbox grid */
 
 /*Item Card Style */
 .card {
-  width: 320px;
+  width: 350px;
   background-color: #333;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px 5px;
@@ -189,7 +210,7 @@ header {
 
 /*Buttons Style */
 button {
-  width: 280px;
+  width: 284px;
   height: 60px;
   margin: 10px 5px;
   background-color: #333;
@@ -221,18 +242,20 @@ button:before {
 .specials:before {
   border-color: transparent transparent #f28b00 transparent;
 }
-.pizza_type{
- width:120px;
- height: 40px;
- background-color: transparent;
- margin: 5px 7px;
- font-size: 16px;
- border: 1px solid;
- border-radius: 5px;
+
+.pizza_type {
+  width: 125px;
+  height: 40px;
+  background-color: transparent;
+  margin: 5px 7px;
+  font-size: 16px;
+  border: 1px solid;
+  border-radius: 5px;
 }
-.pizza_type:before{
-  border-color: transparent 
+.pizza_type:before {
+  border-color: transparent;
 }
+
 button:hover, button:active {
   border-color: #f28b00;
 }
@@ -243,40 +266,42 @@ button:hover, button:active {
   margin-top: 5px;
 }
 
-.order_lunch:hover, .order_lunch:active,.choose_pizza:hover, .choose_pizza:active,.type:hover,.type:active {
+.order_lunch:hover, .order_lunch:active,
+.choose_pizza:hover, .choose_pizza:active,
+.type:hover, .type:active{
   border: 2px solid #eee;
   border-color: #eee;
 }
 
-
+/*Removing 1-column buttons */
 @media screen and (max-width: 910px) {
-  .menu_button,.pizza_type{
+  .menu_button, .pizza_type {
     width: 43%;
-    margin: 2%;
+    margin: 0.5em;
   }
 }
+
 /*End Buttons Style */
 
-
-/*Mobile Nav */
+/*Mobile and Tablet Media Query */
 @media screen and (max-width: 768px) {
- 
-.top_nav{
-  position: fixed;
-  width: 100%
-}
   .hide {
     display: none;
   }
 
+  .logo {
+    width: 60px;
+  }
+
   .toggle_menu {
     margin: 10px 0 10px 15px;
-    padding: 7px;
+    padding: 0.5em;
     display: inline-block;
     color: #eee;
     border: 1.5px solid;
     border-radius: 5px;
     cursor: pointer;
+    text-transform: uppercase;
     -webkit-user-select: none;
     user-select: none;
     -moz-user-select: none;
@@ -287,76 +312,61 @@ button:hover, button:active {
     display: block;
     text-align: center;
     padding: 0;
+    text-transform: uppercase;
   }
 
-
-
-
-.top_nav li {
+  .menu_nav li {
     border-top: 1px dotted #eee;
-     padding: 1em 0;
+    padding: 1em 0;
+  }
+  .menu_nav li:hover, .menu_nav li:active {
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
-.top_nav li:hover,.top_nav li:active {
- background-color: rgba(0, 0, 0, 0.5);
-}
-.mobile_cart {
+  .mobile_cart {
     margin: 15px 15px 10px 0;
     display: block;
     float: right;
     cursor: pointer;
-}
-.special {
+  }
+
+  .special {
     background-color: #f28b00;
     background-color: rgba(242, 139, 0, 0.7);
     border-bottom: none;
   }
-
 }
 /*End Mobile Nav */
 
-/*Layout for Bigger Screen*/
+/*Layout for Bigger Screen */
 @media screen and (min-width: 768px) {
 
-
-  h1 {
-    font-size: 1.5rem;
+  .menu_nav {
+    padding: 1em;
+  }
+  
+  .cart{
+    width: 27px;
+    margin-right: 5px
+  }
+  ul{
+    text-align: end
+  }
+  li {
+    margin-right: 1em;
+    text-transform: uppercase;
+    display: inline;
+  }
+  header{
+    max-width: 50em
+  }
+  .name {
+    float: left;
   }
 
-  h2 {
-    font-size: 1.4rem;
+  .filter{
+    margin-bottom: 1.5em;
   }
-
-  h3 {
-    font-size: 1.3rem;
-  }
-
-  h4 {
-    font-size: 1.2rem;
-  }
-
-
-.top_nav {
-  padding: 1em
-}
-ul{
-   text-align: end
-}
-li{
-  margin-right: 1em;
-  text-transform: uppercase;
-  display: inline;
  
 }
-.logo_name{
-  float: left
-}
-
-
-.flexbox.checkout_nav{
-   justify-content: flex-end
-}
-}
-
 /*End Layout for Bigger Screen */
-
