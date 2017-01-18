@@ -1,17 +1,22 @@
-*{
+/*General Style */
+
+* {
   box-sizing: border-box;
 }
+
 body {
   width: 100%;
   margin: 0;
   background-color: #333;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
   color: #eee;
   letter-spacing: 0.02rem;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  z-index: 9999;
+  font-size: 17px;
+}
+
+p{
+  vertical-align: middle
 }
 
 img {
@@ -19,34 +24,30 @@ img {
   height: auto;
 }
 
-main {
-  max-width: 60em;
-  margin: 0 auto;
-  padding: 20px 0 0 0;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
 header {
   color: #eee;
   text-align: center;
   width: 90%;
-  margin: 10px auto
-  
+  margin: 0 auto;
+  padding: 2px;
+  box-shadow: 0 3px 3px 5px rgba(0,0,0,0.7);
 }
 
-h1,
+h1 {
+  font-size: 1.4rem;
+}
+
 h2 {
- font-size: 1.29412rem;
-  margin: 15px 0 0
+  font-size: 1.3rem;
 }
 
-h3,
+h3 {
+  font-size: 1.2rem;
+}
+
 h4 {
-  font-size: 1rem;
-  margin: 10px 0 0
+  font-size: 1.1rem;
 }
-
 
 hr {
   width: 60%;
@@ -56,15 +57,136 @@ hr {
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
 }
 
-#pizza_banner{
-  background: url(../pictures/banner_pizza.png) 50% 0 no-repeat ;
-  padding: 40px
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
+main {
+  max-width: 70em;
+  margin: 0 auto;
+  padding: 20px 0 0 0;
+  text-align: center;
+  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.6);
+}
 
-/*Item Card Style*/
+.menu_nav {
+  max-width: 70em;
+  margin: 0 auto;
+  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: 0.3px solid;
+  z-index: 999;
+}
+
+.cart_nav {
+  background-color: #F8971D;
+  font-weight: 700;
+  max-width: 70em;
+  margin: 0 auto;
+}
+
+.fixed {
+  display: block;
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+.checkout a {
+  padding: 0.5em;
+  margin: 1em;
+  border: 1px solid;
+  border-radius: 5px;
+}
+.checkout a:hover {
+  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+input[type=checkbox], label, .mobile_cart {
+  display: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #eee;
+  position: relative;
+  vertical-align: middle;
+}
+.menu_nav a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  border-bottom: 2px solid #eee;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.menu_nav a:hover:after {
+  width: 100%;
+}
+
+.pizza_banner {
+  background: url(../pictures/banner_pizza.png) 50% 0 no-repeat;
+}
+
+.dinner_banner {
+  margin-top: 20px;
+}
+
+.logo {
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+}
+
+/*End General Style */
+
+/*Responsive flexbox grid */
+.flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.center{
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.right{
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+/*End Responsive flexbox grid */
+
+/*Item Card Style */
 .card {
-  width: 300px;
+  width: 350px;
   background-color: #333;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px 5px;
@@ -83,15 +205,16 @@ hr {
 .price {
   font-size: 2rem;
 }
-/*Item Card Style*/
 
-/*Buttons Style*/
+/*Item Card Style */
 
+/*Buttons Style */
 button {
+  width: 284px;
   height: 60px;
-  width: 250px;
+  margin: 10px 5px;
   background-color: #333;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
   border: 2px solid #eee;
   color: #eee;
   cursor: pointer;
@@ -103,30 +226,6 @@ button {
   position: relative;
   text-transform: uppercase;
 }
-.pizza,
-.dinner,
-.burger {
-margin: 10px 10px 20px 30px;
-}
-.drink,
-.salad,
-.specials {
-  margin: 10px 30px 20px 10px;
-}
-
-@media screen and (max-width: 768px) {
-.drink,
-.salad,
-.specials,
-.pizza,
-.dinner,
-.burger{
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-}
-
 button:before {
   content: "";
   position: absolute;
@@ -140,180 +239,134 @@ button:before {
   z-index: 1;
 }
 
-button.specials:before {
+.specials:before {
   border-color: transparent transparent #f28b00 transparent;
 }
 
-button:hover,
-button:active {
+.pizza_type {
+  width: 125px;
+  height: 40px;
+  background-color: transparent;
+  margin: 5px 7px;
+  font-size: 16px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+.pizza_type:before {
+  border-color: transparent;
+}
+
+button:hover, button:active {
   border-color: #f28b00;
 }
 
-.order_lunch,
-.choose_pizza {
+.order_lunch, .choose_pizza {
   border: 2px dotted #eee;
   border-color: #f28b00;
-  margin-top: 5px
+  margin-top: 5px;
 }
 
-.order_lunch:hover,
-.order_lunch:active {
+.order_lunch:hover, .order_lunch:active,
+.choose_pizza:hover, .choose_pizza:active,
+.type:hover, .type:active{
   border: 2px solid #eee;
   border-color: #eee;
 }
 
-.choose_pizza:hover,
-.choose_pizza:active {
-  border: 2px solid #eee;
-  border-color: #eee;
-}
-/*End Buttons Style*/
-
-
-/*Responsive flexbox grid */
-
-.flexbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+/*Removing 1-column buttons */
+@media screen and (max-width: 910px) {
+  .menu_button, .pizza_type {
+    width: 43%;
+    margin: 0.5em;
+  }
 }
 
-/*End Responsive flexbox grid */
+/*End Buttons Style */
 
-/*Big Screen Nav */
-
-nav {
-  width: 100%;
-  top: 0;
-  background-color: #333;
-  background-color: rgba(51, 51, 51, 0.9);
-  z-index: 999;
-}
-
-ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  padding: 20px 20px 18px 20px;
- 
-}
-
-.logo {
-  position: absolute;
-  margin: 0 20px
-}
-
-ul li:hover:not(:last-child),
-ul li:active:not(:last-child) {
-  background-color: #607d8b;
-  border-radius: 10px;
-}
-
-ul li a {
-  text-decoration: none;
-  color: #eee;
-  vertical-align: middle
-}
-
-input[type=checkbox],
-label,
-.mobile_cart,
-.mobile_logo {
-  display: none;
-}
-
-/*End Big Screen Nav */
-
-/*Small and Medium Screen Nav */
-
+/*Mobile and Tablet Media Query */
 @media screen and (max-width: 768px) {
-
-  input {
-  margin-left: 20px;
-}
-  .hide
-  {
+  .hide {
     display: none;
   }
+
+  .logo {
+    width: 60px;
+  }
+
   .toggle_menu {
     margin: 10px 0 10px 15px;
-    padding:7px;
+    padding: 0.5em;
     display: inline-block;
     color: #eee;
-    border: 1px solid;
-    border-radius:5px;
+    border: 1.5px solid;
+    border-radius: 5px;
     cursor: pointer;
+    text-transform: uppercase;
     -webkit-user-select: none;
     user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
   }
- 
-  .logo{
-    margin: 0;
-    width: 70px;
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0)
-  }
-  .mobile_cart:before {
-    content: "";
-    display: table;
-  }
-  .mobile_cart:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+
   input[type=checkbox]:checked ~ ul {
     display: block;
     text-align: center;
     padding: 0;
+    text-transform: uppercase;
   }
-  li {
-    border-top: 1px solid;
+
+  .menu_nav li {
+    border-top: 1px dotted #eee;
+    padding: 1em 0;
   }
+  .menu_nav li:hover, .menu_nav li:active {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .mobile_cart {
+    margin: 15px 15px 10px 0;
+    display: block;
+    float: right;
+    cursor: pointer;
+  }
+
   .special {
     background-color: #f28b00;
     background-color: rgba(242, 139, 0, 0.7);
     border-bottom: none;
   }
 }
-/*End Small and Medium Screen Nav */
+/*End Mobile Nav */
 
-/*Big Screen Layout*/
-@media screen and (min-width: 640px){
-body{
-  background: url(../pictures/bg.jpg) 50% 0 no-repeat fixed;
-  background-size: cover;
-  font-size: 18px;
-  line-height: 26px;
+/*Layout for Bigger Screen */
+@media screen and (min-width: 768px) {
+
+  .menu_nav {
+    padding: 1em;
+  }
+  
+  .cart{
+    width: 27px;
+    margin-right: 5px
+  }
+  ul{
+    text-align: end
+  }
+  li {
+    margin-right: 1em;
+    text-transform: uppercase;
+    display: inline;
+  }
+  header{
+    max-width: 50em
+  }
+  .name {
+    float: left;
+  }
+
+  .filter{
+    margin-bottom: 1.5em;
+  }
+ 
 }
-}
-
-
-
-
-
-
-
-
-
-
-
-/*End Big Screen Layout*/
+/*End Layout for Bigger Screen */
